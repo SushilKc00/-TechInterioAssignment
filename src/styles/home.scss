@@ -1,0 +1,251 @@
+.home-slider-section{
+    .home-swiper{
+        &:hover > .prev{
+           left: 1%;
+           transition: all 600ms ease;   
+        }
+        &:hover > .next{
+            right: 2%;
+            transition: all 600ms ease;
+             
+         }
+        .home-slider-background{
+            // min-height: 100vh;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(120deg,rgb(2, 2, 2),rgb(44, 44, 44));
+                opacity: 0.6;
+                z-index: -1;
+            }
+            .home-content-wrapper{
+                    display: flex;
+                    align-items: center;
+                    @media (width<=768px) {
+                        flex-direction: column;
+                    }
+                .left{
+                    @media (width<=768px) {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    h1{
+                        font-size: 6.6vw;
+                        color: white;
+                        font-weight: 900;
+                        line-height: 11rem;
+                        letter-spacing: -0.3rem;
+                        @media (width<=1024px) {
+                          line-height: 6rem;
+                          letter-spacing: 0;
+                          font-size: 3.5rem;
+                        }
+                        
+                    }
+                    h2{
+                        font-size: 2.6rem;
+                        color: white;
+                        font-weight: 600;
+                        margin-top: 3rem;
+                        @media (width<=768px) {
+                           margin-top: 0.5rem;
+                           font-size: 2.2rem;
+                        }
+                    }
+                    button{
+                        border: 1px solid white;
+                        border-radius: 4px;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: white;
+                        margin-top: 3rem;
+                        padding: 1rem 2.2rem;
+                        @media (width<=768px) {
+                            margin-top: 2rem;
+                         }
+                        &:hover{
+                            background-color: #EA000D;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+                .right{
+                    width: 50%;
+                    margin-top: 6rem;
+                    @media (width<=1024px) {
+                        width: 70%;
+                        height: 650px;
+                    }
+                    @media (width<=500px) {
+                        height: 100%;    
+                        height: 300px;                   
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        margin-top: 4rem;
+                        filter: brightness(110%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.together-wrapper{
+    @media (width<=1100px) {
+        padding: 0 1.2rem;
+      }
+    .together-card-container{
+        max-width: 1100px;
+        margin-inline: auto;
+     
+        .together-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    }
+}
+
+.donation-container{
+    width: 100%;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 0;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(120deg,rgb(2, 2, 2),rgb(16, 16, 16));
+        opacity: 0.75;
+        z-index: -1;
+    }
+    .donation-wrapper{
+         @media (width<=600px) {
+            padding: 2rem 1rem;
+         }
+    }
+}
+
+.campaign-container{
+    max-width: 1100px;
+    margin-inline: auto;
+    @media(width<=1100px) {
+         padding: 0 1.5rem;
+    }
+    .campaign-slider{
+        .campaign-card{
+            .img-container{
+                position: relative;
+                height: 400px;
+                overflow: hidden;
+                &:hover > img{
+                    transform: scale(1.1);
+                    transition: all 0.5s ease-in-out;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                   background: linear-gradient(to top,#a03c2d,#1f1f1f98);
+                   opacity: 0.9;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+         
+        }
+    }
+}
+
+.volunteer-conatiner{
+    //  min-height: 76vh;
+     background-image: url("../assets//images//asset\ 7.png");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: bottom left;
+     background-color: #EF3345;
+     padding: 12rem 0;
+     @media (width<=600px) {
+        padding: 2rem 0;
+     }
+}
+
+.mission-vision-container{
+    .left{
+        width: 50%;
+        @media (width<768px) {
+             width: 100%;
+        }
+    }
+    right{
+        width: 50%;
+        @media (width<768px) {
+            width: 100%;
+       }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.newsletter-conatiner{
+     background-image: url("../assets//images/asset\ 8.jpeg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: bottom left;
+     padding: 10rem 0;
+     z-index: 1;
+     position: relative;
+     &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(rgb(2, 2, 2),rgb(16, 16, 16));
+        opacity: 0.4;
+        z-index: -1;
+    }
+}
+
+.news-container{
+  .news-card{
+    .img-container{
+        height: 240px;
+        width: 35   0px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+  }
+}
+

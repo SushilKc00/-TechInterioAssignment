@@ -1,0 +1,33 @@
+footer{
+    // min-height: 60vh;
+    padding-top: 4rem;
+    background-color: rgb(11, 22, 44);
+    .upper_footer{
+      @media (width<=1024px) {
+         padding-top: 6rem;
+      }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            @media (width<=768px) {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 2.5rem;
+            }
+          .last-grid{
+            h2{
+              text-align: end;
+              @media (width<=768px) {
+                text-align: center;
+              }
+            }
+            p{
+              text-align: end;
+              @media (width<=768px) {
+                text-align: center;
+              }
+            }
+          }
+        }
+  }
+}
